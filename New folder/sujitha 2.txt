@@ -1,0 +1,173 @@
+
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>git --version
+git version 2.25.0.windows.1
+
+C:\Users\Admin>git clone https://github.com/sujathareddymittapalli/Ecommerce.git
+Cloning into 'Ecommerce'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 617 bytes | 5.00 KiB/s, done.
+
+C:\Users\Admin>Ecommerce
+'Ecommerce' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\Admin>cd \Ecommerce
+The system cannot find the path specified.
+
+C:\Users\Admin>cd Ecommerce
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.html.txt
+        index.html.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Admin\Ecommerce>git add abc.html index.html
+fatal: pathspec 'abc.html' did not match any files
+
+C:\Users\Admin\Ecommerce>git add abc.html index.html
+fatal: pathspec 'index.html' did not match any files
+
+C:\Users\Admin\Ecommerce>git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.html
+        index.html.txt
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Admin\Ecommerce>git add abc.html index.html.txt
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   abc.html
+        new file:   index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.txt
+
+
+C:\Users\Admin\Ecommerce>git add index.txt
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   abc.html
+        new file:   index.html.txt
+        new file:   index.txt
+
+
+C:\Users\Admin\Ecommerce>git commit -m 'added abc.html and index.html.txt and index.txt'
+error: pathspec 'and' did not match any file(s) known to git
+error: pathspec 'and' did not match any file(s) known to git
+error: pathspec 'index.txt'' did not match any file(s) known to git
+
+C:\Users\Admin\Ecommerce>git commit -m "added abc.html and index.html.txt and index.txt"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Admin@DESKTOP-61IIR4G.(none)')
+
+C:\Users\Admin\Ecommerce>git config --global user.email "sujathareddymittapalli@gmail.com"
+
+C:\Users\Admin\Ecommerce>git config --global user.name "sujatha"
+
+C:\Users\Admin\Ecommerce>git commit -m "added abc.html and index.html.txt and index.txt"
+[master 1ae3c5f] added abc.html and index.html.txt and index.txt
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.html
+ create mode 100644 index.html.txt
+ create mode 100644 index.txt
+
+C:\Users\Admin\Ecommerce>git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 315 bytes | 78.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sujathareddymittapalli/Ecommerce.git
+   d949586..1ae3c5f  master -> master
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Admin\Ecommerce>git add .
+
+C:\Users\Admin\Ecommerce>git push origin master
+Everything up-to-date
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html.txt
+
+
+C:\Users\Admin\Ecommerce>git commit -m modified 'index.html.txt'
+error: pathspec ''index.html.txt'' did not match any file(s) known to git
+
+C:\Users\Admin\Ecommerce>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html.txt
+
+
+C:\Users\Admin\Ecommerce>git commit -m modified "index.html.txt"
+[master f04f342] modified
+ 1 file changed, 8 insertions(+)
+
+C:\Users\Admin\Ecommerce>
